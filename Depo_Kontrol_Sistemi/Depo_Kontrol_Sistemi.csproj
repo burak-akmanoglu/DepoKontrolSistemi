@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDFC934C-6939-4C1E-9A50-B8DE8BDCB358}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Depo_Kontrol_Sistemi</RootNamespace>
+    <AssemblyName>Depo_Kontrol_Sistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSatis.Designer.cs">
+      <DependentUpon>FormSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarka.Designer.cs">
+      <DependentUpon>FormMarka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductList.Designer.cs">
+      <DependentUpon>FormProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSatisList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSatisList.Designer.cs">
+      <DependentUpon>FormSatisList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarkod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBarkod.Designer.cs">
+      <DependentUpon>FrmBarkod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetails.Designer.cs">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriEkle.Designer.cs">
+      <DependentUpon>frmMusteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriListecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriListecs.Designer.cs">
+      <DependentUpon>frmMusteriListecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRepoMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRepoMax.Designer.cs">
+      <DependentUpon>FrmRepoMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Urundata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Urundata.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormSatis.resx">
+      <DependentUpon>FormSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarka.resx">
+      <DependentUpon>FormMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductList.resx">
+      <DependentUpon>FormProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSatisList.resx">
+      <DependentUpon>FormSatisList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarkod.resx">
+      <DependentUpon>FrmBarkod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetails.resx">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriEkle.resx">
+      <DependentUpon>frmMusteriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriListecs.resx">
+      <DependentUpon>frmMusteriListecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRepoMax.resx">
+      <DependentUpon>FrmRepoMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Urundata.xsc">
+      <DependentUpon>Urundata.xsd</DependentUpon>
+    </None>
+    <None Include="Urundata.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Urundata.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Urundata.xss">
+      <DependentUpon>Urundata.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
