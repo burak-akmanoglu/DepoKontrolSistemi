@@ -16,6 +16,6 @@ Barkod oluşturabilir ve barkod okutabilirsiniz.
 ![Barkod](Images/Barkod.PNG)
 
 * Giriş:
-* 
+
 ![Login](Images/Login.PNG)
 
